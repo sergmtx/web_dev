@@ -1,0 +1,27 @@
+html {
+  background-color: azure;
+  background: url('IMG_4880.JPG') repeat-x center;
+}
+body {
+      text-align: center;
+  }
+
+#firstone {color: brown}
+.class_1 {color: chartreuse}
+h1.style_r {background-color: blue}
+#textstyle:hover {
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+.ref {
+  color: rgb(14, 63, 224);
+  text-decoration: none;
+}
+.ref:hover {
+  color: rgb(14, 224, 24);
+  text-decoration: none;
+}
+p:active {
+  background-color: brown;
+}
