@@ -9,8 +9,23 @@ class Methods {
 	return bigone;
 	}
 
-
-
+	//Написать функцию, принимающую строку, и возвращающую количество раз, буква 'e' (большая и маленькая) встречается в данной строке.
+	static int contE(String str){
+        char[] strToArray = str.toCharArray();
+        int sum = 0;
+		for (int i = 0; i < strToArray.length; i++) {
+			if ( strToArray[i] == 'e' || strToArray[i] == 'E') sum++;
+		}
+		return sum;
+	}
+    //Написать функцию, принимающую число, и возвращающую сумму положительных чисел меньше заданного, которые делятся на 3 или на 5.
+    static int LessDiv (int a){
+	    int sum = 0;
+	    for (int i = a; i > 0; i--) {
+	        if (i%3==0 || i%5==0 ) sum = sum + i;
+        }
+        return sum;
+    }
 	// принимает 3 инта, возвращает большее из них
 	static int Max (int a, int b, int c){
 		int bigone;
