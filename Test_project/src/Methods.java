@@ -9,6 +9,8 @@ class Methods {
 	return bigone;
 	}
 
+
+
 	// принимает 3 инта, возвращает большее из них
 	static int Max (int a, int b, int c){
 		int bigone;
@@ -59,58 +61,15 @@ class Methods {
 	public static void hello_me () {
 		System.out.println ("Hello, MTX");
 	}
+	static int powerOfTwo (int a) {
+		//     int c = a*a;
+		return a*a;
+	}
+	static boolean isEven (int a){
+		return a % 2 == 0;
+	}
 
-	/* public static void main(String [] args) {
-		printHello ();
-		// logic
-		printHello ();
-		printCustomHello ("Tolik");
-		printCustomHello ("Tolik", 5);
-		
-		int a = 10;
-		int c = 15;
-		int result = sum(a, c);
-		
+	static String isEven2 (int a){
+		return a % 2 == 0 ? "Even":"Odd";
 	}
-	
-	static int sum(int a, int b){
-		int sum = a + b;
-		return sum;
-	}
-	
-	static void printHello(){
-		System.out.println("Hello");
-	}	
-	
-	static void printCustomHello(String name){ // name = "Tolik"
-		System.out.println("Hello to " + name);
-	}	
-	
-	static void printCustomHello(String name, int count) {
-		for(int i = 0; i < count; i++) {
-			printCustomHello("Hello");
-		} 
-
-		public static void main(String [] args) {
-		int[] array;
-		array = new int [5];
-		System.out.println(array);
-		array[3] = 10;
-		array[0] = 10;
-		
-		for(int i = 0; i < array.length; i++) {
-			int value = array[i];
-			System.out.println(value);	
-		}
-		
-		boolean [] boolArray = {true, false, true};
-	}
-	
-	static void print(int [] array) {
-		for(int i = 0; i < array.length; i++) {
-			int value = array[i];
-			System.out.print(value + " ");	
-		}
-		System.out.println();	
-	} */
-	}
+}
