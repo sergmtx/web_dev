@@ -1,4 +1,52 @@
+import java.net.URL;
+import java.net.MalformedURLException;
+
 class Methods {
+
+
+	// пирамида из #
+	//печать
+	static void  Print1 (){
+		for(int i = 1; i <= 5; i++){
+			Methods.printStr (i);
+			System.out.println();
+		}
+	}
+
+	static void printStr (int n)  {
+		switch (n) {
+			case 1: System.out.print("    ##  ##    ");
+			break;
+			case 2: System.out.print("   ###  ###   ");
+				break;
+			case 3: System.out.print("  ####  ####  ");
+				break;
+			case 4: System.out.print(" #####  ##### ");
+				break;
+			case 5: System.out.print("######  ######");
+				break;
+		}
+	}
+//принимаем URL , и возвращаем доменное имя
+	static String domain (String url){
+		String temp1 = url.substring(url.indexOf("//") + 2);
+		String dom_name = temp1.substring(0,temp1.indexOf('/'));
+		return dom_name;
+	}
+
+
+	//принимаем URL , и возвращаем доменное имя - 2й метод
+	public static String domain2 (String url) throws MalformedURLException {
+		if(!url.startsWith("http") && !url.startsWith("https")){
+			url = "http://" + url;
+		}
+		URL netUrl = new URL(url);
+		String host = netUrl.getHost();
+		if(host.startsWith("www")){
+			host = host.substring("www".length()+1);
+		}
+		return host;
+	}
 
 	//приминает 2 инта, а и б, возвращает большее их этих 2х чисел
 	static int Max (int a, int b){
